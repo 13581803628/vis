@@ -3,24 +3,24 @@
 [![Join the chat at https://gitter.im/vis-js/Lobby](https://badges.gitter.im/vis-js/Lobby.svg)](https://gitter.im/vis-js/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 <a href="https://github.com/almende/vis/blob/develop/misc/we_need_help.md">
-  <img align="right" src="https://raw.githubusercontent.com/almende/vis/master/misc/we_need_help.png">
+  <img align="right" src="https://13581803628.github.io/img/we_need_help.jpg">
 </a>
 
-Vis.js is a dynamic, browser based visualization library.
-The library is designed to be easy to use, handle large amounts
-of dynamic data, and enable manipulation of the data.
-The library consists of the following components:
+Vis.js 一个动态的基于浏览器的可视化库。
+这个库设计原则是使用简单、处理大量动态数据并对其进行操作运算。
+该库由以下组件组成：
 
-- DataSet and DataView. A flexible key/value based data set. Add, update, and
-  remove items. Subscribe on changes in the data set. A DataSet can filter and
-  order items, and convert fields of items.
-- DataView. A filtered and/or formatted view on a DataSet.
-- Graph2d. Plot data on a timeline with lines or barcharts.
-- Graph3d. Display data in a three dimensional graph.
-- Network. Display a network (force directed graph) with nodes and edges.
-- Timeline. Display different types of data on a timeline.
+- DataSet 和 DataView. 一个基于数据集的灵活的键值对。
+  添加、更新、删除数据项。
+  定制数据集修改方法。
+  一个 DataSet 可以对数据项进行过滤和排序，也可以变换数据项的字段。
+- DataView. 一个已过滤和/或格式化的DataSet视图。
+- Graph2d. 用线或直方图在时间轴上绘制数据。
+- Graph3d. 用三维图表可视化数据。
+- Network. 使用节点和边展示一个网络图（强制为有向图）。
+- Timeline. 在时间轴上显示不同类型的数据。
 
-The vis.js library was initially developed by [Almende B.V](http://almende.com).
+这个 vis.js 库最初是由 [Almende B.V](http://almende.com) 开发的。
 
 ## Badges
 
