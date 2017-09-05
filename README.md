@@ -22,7 +22,7 @@ Vis.js 一个动态的基于浏览器的可视化库。
 
 这个 vis.js 库最初是由 [Almende B.V](http://almende.com) 开发的。
 
-## Badges
+## 徽章
 
 [![NPM](https://nodei.co/npm/vis.png?downloads=true&downloadRank=true)](https://nodei.co/npm/vis/)
 
@@ -40,24 +40,24 @@ Vis.js 一个动态的基于浏览器的可视化库。
 
 [![Code Climate](https://codeclimate.com/github/almende/vis/badges/gpa.svg)](https://codeclimate.com/github/almende/vis) 
 
-## Install
+## 安装
 
-Install via npm:
+通过 npm 安装：
 
     $ npm install vis
 
-Install via bower:
+通过 bower安装：
 
     $ bower install vis
 
-Link via cdnjs: http://cdnjs.com
+通过 cdnjs 链接： http://cdnjs.com
 
-Or download the library from the github project:
+或者从这个GitHub项目中下载这个库：
 [https://github.com/almende/vis.git](https://github.com/almende/vis.git).
 
-## Load
+## 加载
 
-To use a component, include the javascript and css files of vis in your web page:
+为了使用这个组件，在你的网页中应该包含vis库的JavaScript文件和CSS文件：
 
 ```html
 <!DOCTYPE HTML>
@@ -68,13 +68,13 @@ To use a component, include the javascript and css files of vis in your web page
 </head>
 <body>
   <script type="text/javascript">
-    // ... load a visualization
+    // ... 加载一个可视化视图
   </script>
 </body>
 </html>
 ```
 
-or load vis.js using require.js. Note that vis.css must be loaded too.
+或者通过require.js来加载 vis.js。注意： vis.css 也必须被加载。
 
 ```js
 require.config({
@@ -83,27 +83,24 @@ require.config({
   }
 });
 require(['vis'], function (math) {
-  // ... load a visualization
+  // ... 加载一个可视化视图
 });
 ```
 
 
-A timeline can be instantiated as:
+时间线可以实例化为：
 
 ```js
 var timeline = new vis.Timeline(container, data, options);
 ```
 
-Where `container` is an HTML element, `data` is an Array with data or a DataSet,
-and `options` is an optional object with configuration options for the
-component.
+这里的 `container` 是一个 HTML 元素，`data` 是一个数据或者DataSet数组，
+`options` 是一个可选项，它是一个定义这个组件配置参数的一个object对象。
 
+## 示例
 
-## Example
-
-A basic example on loading a Timeline is shown below. More examples can be
-found in the [examples directory](https://github.com/almende/vis/tree/master/examples)
-of the project.
+加载时间线的基本示例如下所示。更多的示例请查看这个项目的
+[示例库](https://github.com/almende/vis/tree/master/examples)。
 
 ```html
 <!DOCTYPE HTML>
@@ -139,85 +136,82 @@ of the project.
 </html>
 ```
 
-## Build
+## 搭建
 
-To build the library from source, clone the project from github
+从源码开始搭建这个库，先从GitHub上克隆这个项目
 
     $ git clone git://github.com/almende/vis.git
 
-The source code uses the module style of node (require and module.exports) to
-organize dependencies. To install all dependencies and build the library,
-run `npm install` in the root of the project.
+源码使用了node的模块模式（require 和 module.exports）来组织依赖关系。
+为了安装所有的依赖库并搭建这个库，在项目的根目录处运行`npm install`指令。
 
     $ cd vis
     $ npm install
 
-Then, the project can be build running:
+然后，项目可以建立运行：
 
     $ npm run build
 
-To automatically rebuild on changes in the source files, once can use
+要自动重建源文件中的更改，可以使用
 
     $ npm run watch
 
-This will both build and minify the library on changes. Minifying is relatively
-slow, so when only the non-minified library is needed, one can use the
-`watch-dev` script instead:
+这样做可以在发生变化时构建和压缩这个库。压缩过程相对较慢，所以当只需要非压缩库时，可以运行`watch-dev` 脚本替换：
 
     $ npm run watch-dev
 
-## Custom builds
+## 自定义搭建
 
-The folder `dist` contains bundled versions of vis.js for direct use in the browser. These bundles contain all the visualizations and include external dependencies such as *hammer.js* and *moment.js*.
+`dist`文件夹包含`vis.js`的捆绑版本，以便在浏览器中直接使用。这些捆绑库包含所有可视化，并包含像`*hammer.js* `和 `*moment.js*`等外部依赖项。
 
-The source code of vis.js consists of commonjs modules, which makes it possible to create custom bundles using tools like [Browserify](http://browserify.org/) or [Webpack](http://webpack.github.io/). This can be bundling just one visualization like the Timeline, or bundling vis.js as part of your own browserified web application.
+`vis.js`的源代码由`commonjs`模块组成，这样做可以方便使用像[Browserify](http://browserify.org/) 或 [Webpack](http://webpack.github.io/)这样的工具自定义创建捆绑版本。这可以只捆绑一个像时间轴的可视化方法，或者将vis.js绑定为你自己的浏览器Web应用程序的一部分。
 
-*Note that hammer.js version 2 is required as of v4.*
+*注意，从v4开始，必须使用hammer.js 版本2。*
 
-### Prerequisites
+### 先决条件
 
-Before you can do a build:
+在构建库之前你需要：
 
-- Install *node.js* and *npm* on your system: https://nodejs.org/
-- Install the following modules using npm: `browserify`, `babelify`, and `uglify-js`:
+- 在你的操作系统中安装 *node.js* 和 *npm* ：https://nodejs.org/
+- 使用npm安装以下模块： `browserify`、`babelify` 和 `uglify-js`:
 
   ```
   $ [sudo] npm install -g browserify babelify uglify-js
   ```
 
-- Download or clone the vis.js project:
+- 下载或者克隆 vis.js 项目：
 
   ```
   $ git clone https://github.com/almende/vis.git
   ```
 
-- Install the dependencies of vis.js by running `npm install` in the root of the project:
+- 通过在项目根目录运行`npm install`指令来安装vis.js的依赖库：
 
   ```
   $ cd vis
   $ npm install
   ```
 
-### Examples of custom builds
+### 自定义搭建的示例
 
-#### Example 1: Bundle only a single visualization type
+#### 例1: 捆绑单一的可视化类型
 
-For example, to create a bundle with just the Timeline and DataSet, create an index file named **custom.js** in the root of the project, containing:
+举个例子，创建一个仅包含时间线和数据集的捆绑版本，在工程根目录处创建一个命名为**custom.js**的索引文件，包含：
 
 ```js
 exports.DataSet = require('./lib/DataSet');
 exports.Timeline = require('./lib/timeline/Timeline');
 ```
 
-Then create a custom bundle using browserify, like:
+然后使用browserify创建一个自定义捆绑，像：
 
     $ browserify custom.js -t [ babelify --presets [es2015] ] -o dist/vis-custom.js -s vis
-    
-This will generate a custom bundle *vis-custom.js*, which exposes the namespace `vis` containing only `DataSet` and `Timeline`. The generated bundle can be minified using uglifyjs:
+    
+这样就会生成一个自定义捆绑版本 *vis-custom.js*，它会公开一个命名空间`vis`，这个命名空间只包含 `DataSet` 和 `Timeline`。 这个生成的捆绑版本可以使用uglifyjs来压缩：
 
     $ uglifyjs dist/vis-custom.js -o dist/vis-custom.min.js
 
-The custom bundle can now be loaded like:
+这个自定义捆绑版本现在就可以像这样加载：
 
 ```html
 <!DOCTYPE HTML>
@@ -232,7 +226,7 @@ The custom bundle can now be loaded like:
 </html>
 ```
 
-#### Example 2: Exclude external libraries
+#### 例2：排除外部库
 
 The default bundle `vis.js` is standalone and includes external dependencies such as *hammer.js* and *moment.js*. When these libraries are already loaded by the application, vis.js does not need to include these dependencies itself too. To build a custom bundle of vis.js excluding *moment.js* and *hammer.js*, run browserify in the root of the project:
 
@@ -262,7 +256,7 @@ The custom bundle can now be loaded as:
 </html>
 ```
 
-#### Example 3: Bundle vis.js as part of your (commonjs) application
+#### 例3：捆绑 vis.js 作为你应用（commonjs）的一部分
 
 When writing a web application with commonjs modules, vis.js can be packaged automatically into the application. Create a file **app.js** containing:
 
@@ -304,7 +298,7 @@ And loaded into a webpage:
 </html>
 ```
 
-#### Example 4: Integrate vis.js components directly in your webpack build
+#### 例4：将vis.js组件直接集成到Webpack构建中
 
 You can integrate e.g. the timeline component directly in you webpack build.
 Therefor you just import the component-files from root direcory (starting with "index-").
@@ -337,28 +331,28 @@ module: {
 }
 ```
 
-## Test
+## 测试
 
-To test the library, install the project dependencies once:
+要测试库，首先安装项目依赖关系：
 
     $ npm install
 
-Then run the tests:
+然后运行测试：
 
     $ npm run test
 
-## License
+## 许可
 
 Copyright (C) 2010-2017 Almende B.V. and Contributors
 
-Vis.js is dual licensed under both
+Vis.js 是双重授权，包括
 
   * The Apache 2.0 License
     http://www.apache.org/licenses/LICENSE-2.0
 
-and
+和
 
   * The MIT License
     http://opensource.org/licenses/MIT
 
-Vis.js may be distributed under either license.
+Vis.js可以按照许可证分发。
